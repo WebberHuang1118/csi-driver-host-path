@@ -26,3 +26,9 @@
 8. Attach resotred PVC to pod
     $ kubectl apply -f examples/csi-pod-block-restore.yaml
 
+9. Use for VM Snapshot
+    9.1 Edit setting csi-driver-config as "value: '{"hostpath.csi.k8s.io":{"volumeSnapshotClassName":"csi-hostpath-snapclass"}}'"
+    9.2 Create a PVC with host-path CSI
+    9.3 Take VM snapshot
+    9.4 Restore VM snapshot to a new/existing VM
+
